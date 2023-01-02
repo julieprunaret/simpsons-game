@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: rgb(0,212,255);
+  background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(181,243,255,1) 100%);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 20px;
+  border: 1px solid rgb(190, 190, 190);
+  text-align: center;
+  padding: 30px;
+  margin: 10px;
+  height: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#quote {
+  max-width: 600px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+#quote p {
+  font-size: 25px;
+  line-height: 35px;
+  margin: auto 0;
+}
+
+#button {
+  display: flex;
+}
+
+img {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.apiLink {
+  align-self: center;
+  
+}
+
+/* button spoil */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: inline-flex;
+  font-size: 1rem;  
+  text-decoration: none;  
+  color: var(--color-icon);
+  width: 6rem;
+  height: 6rem;   
+  transition: .5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 6rem;
+  background: #000;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+}
+
+button:hover::before {
+  transform: scale(1);
+  background-color: rgb(0,212,255);
+}
